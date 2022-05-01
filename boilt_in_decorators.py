@@ -1,6 +1,6 @@
 """
 https://docs.python.org/3.5/library/functools.html#functools.wraps
-Here I show how functools.wraps works
+Here I show how functools.wraps works.
 """
 import functools
 
@@ -21,7 +21,7 @@ def wrap_func_using_functools(func: callable) -> callable:
 @wrap_func_using_functools
 def some_func() -> None:
     """
-    Function to be wrap
+    Function to be wrap.
     """
     print("Hello from Some func")
 
@@ -31,7 +31,7 @@ def wrap_func_without_using_functools(func: callable) -> callable:
     Wrap some func.
     :param func: To execute.
     """
-    # @functools.wraps(func) don't use it and leaves you doc
+    # @functools.wraps(func) don't use it and leaves your doc.
     def wrapper():
         print("Hello from wrap.")
         func()
@@ -42,7 +42,7 @@ def wrap_func_without_using_functools(func: callable) -> callable:
 @wrap_func_without_using_functools
 def other_func() -> None:
     """
-    Function to be wrap
+    Function to be wrap.
     """
     print("Hello from other func")
 
