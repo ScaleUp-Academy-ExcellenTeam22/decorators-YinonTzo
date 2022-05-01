@@ -1,6 +1,6 @@
 """
 https://docs.python.org/3.5/library/functions.html#property
-Here I show how property works
+Here I show how property works.
 """
 
 
@@ -31,7 +31,7 @@ class Circle:
     @property
     def radius(self):
         """
-        :return: The radius of the circle
+        :return: The radius of the circle.
         """
         return self._radius
 
@@ -52,17 +52,17 @@ class Circle:
 
 if __name__ == '__main__':
     # Here you can see that you can't put -1 to the radius because of @setter
-    # and the setter put 1
+    # and the setter put 1.
     c1 = Circle(-1)
     print(c1)
     print(c1.area())
     print(c1.perimeter())
-    # Here you can see that you set a new radius
+    # Here you can see that you set a new radius.
     c1.radius = 2
     print(c1.radius)
 
     # Here you can see that you can't put -3 to the radius because of @setter
-    # and the setter put 1 again
+    # and the setter put 1 again.
     c1.radius = -3
     print(c1.radius)
 
