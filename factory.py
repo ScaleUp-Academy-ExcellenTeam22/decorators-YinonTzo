@@ -2,7 +2,7 @@ import functools
 from typing import Callable
 
 
-def type_check(correct_type: any) -> Callable:
+def type_check(correct_type: type) -> Callable:
     """
     Check if the argument is the correct type.
     For more explanation I used this articles:
@@ -12,14 +12,13 @@ def type_check(correct_type: any) -> Callable:
     :return: Decorator function if the argument is ok.
     :raise Type error if the argument is not instance of correct type.
     """
-
     def decorator_func(func: Callable) -> any:
         @functools.wraps(func)
         def wrapper_func(arg: any) -> any:
             if isinstance(arg, correct_type):
                 return func(arg)
             else:
-                raise TypeError(f'Incorrect type. Type should be {correct_type}')
+                raise TypeError(f"Incorrect type. Type should be {correct_type}")
 
         return wrapper_func
 
