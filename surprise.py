@@ -3,7 +3,7 @@ import functools
 
 def surprise(func: callable) -> callable:
     """
-    Make decorator that Does other thing than func.
+    Make a decorator that Does something else than func.
     :param func: Function to call
     :return: function that returns other string than func.
     """
